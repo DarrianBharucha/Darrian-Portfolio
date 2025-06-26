@@ -172,8 +172,8 @@ body.is-preload * {
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, 
-        rgba(99, 102, 241, 0.1) 0%, 
-        rgba(236, 72, 153, 0.1) 50%, 
+        rgba(46, 48, 157, 0.195) 0%, 
+        rgba(238, 59, 148, 0.259) 50%, 
         rgba(6, 182, 212, 0.1) 100%);
 }
 
@@ -334,7 +334,7 @@ body.is-preload * {
 }
 
 .btn-primary:hover {
-    background: var(--primary-color);
+    background: var(--gradient-secondary);
     color: var(--gradient-primary);
     border-color: var(--primary-color);
     transform: translateY(-2px);
@@ -649,6 +649,56 @@ body.is-preload * {
 }
 
 /* Experience Section */
+
+/* Card */
+  .exp-card-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+.exp-card-tab {
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  height: 150px; /* Optional: add a fixed height for vertical centering */
+  display: flex; /* Add this */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Keep text stacked */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  .exp-card-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  }
+
+  .exp-card-tab.active {
+    background: var(--gradient-primary);
+    color: #fff;
+  }
+
+  .exp-card-tab h3 {
+    margin: 0 0 5px;
+  }
+
+  /* Timeline */
+  .timeline-tab {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
 .experience-section {
     padding: 6rem 0;
     background: var(--bg-secondary);

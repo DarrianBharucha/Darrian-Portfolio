@@ -117,7 +117,7 @@
                         <p>My skillset includes Java, Spring Boot, Python, SQL, and front-end technologies. Additionally, I have experience leading marketing and entrepreneurship initiatives at my university.</p>
                     </div>
                     <div class="text-block">
-                        <p>Beyond coding, I take the lead in marketing and strategy as the Vice President of Marketing at The Innovation and Entrepreneurship Cell, NMIMS MPSTME, where I blend creativity with analytical thinking.</p>
+                        <p>Beyond coding, I took the lead in marketing and strategy as the Vice President of Marketing at The Innovation and Entrepreneurship Cell, NMIMS MPSTME, where I blend creativity with analytical thinking.</p>
                     </div>
                     <div class="text-block">
                         <p>When I'm not deep into tech, you'll find me playing football, jamming on the guitar, or discovering new music. Always up for a challenge—whether it's developing cutting-edge applications or perfecting a new riff.</p>
@@ -229,53 +229,118 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience & Leadership</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024 - Present</div>
-                        <h3>Vice President - Marketing</h3>
-                        <h4>Innovation & Entrepreneurship Cell, NMIMS MPSTME</h4>
-                        <p>Led strategic marketing initiatives for a team of 121 members, driving engagement and brand visibility across university events and programs.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024</div>
-                        <h3>Master of Ceremonies</h3>
-                        <h4>INCEPTIO 7.0</h4>
-                        <p>Hosted and moderated speaker sessions, demonstrating exceptional public speaking skills and event management capabilities.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - 2024</div>
-                        <h3>Head, Public Relations</h3>
-                        <h4>Innovation & Entrepreneurship Cell</h4>
-                        <p>Managed media relations, outreach, and branding for IEC events, building strong community connections and partnerships.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023</div>
-                        <h3>Community Service Volunteer</h3>
-                        <h4>Godrej Memorial Hospital</h4>
-                        <p>Assisted in patient care operations, ensuring effective communication between departments and supporting healthcare delivery.</p>
-                    </div>
-                </div>
-            </div>
+<!-- Experience Section -->
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Experience & Leadership</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Card Tabs -->
+    <div class="exp-card-tabs">
+      <div class="exp-card-tab" onclick="openTab('internship', this)">
+        <h3>Internship</h3>
+      </div>
+      <div class="exp-card-tab" onclick="openTab('iec', this)">
+        <h3>Innovation & Entrepreneurship Cell, NMIMS</h3>
+      </div>
+      <div class="exp-card-tab" onclick="openTab('community', this)">
+        <h3>Community Service</h3>
+      </div>
+    </div>
+
+    <!-- Internship Timeline -->
+    <div class="timeline-tab" id="internship" style="display: none;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h3>Technical Pre-Sales Intern</h3>
+            <h4>Anunta Technology Management Services Ltd.</h4>
+            <p>Worked on cloud operations and solution design documentation. Completed sales enablement certifications.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+
+    <!-- IEC Timeline -->
+    <div class="timeline-tab" id="iec" style="display: none;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025 - Present</div>
+            <h3>Student Mentor</h3>
+            <h4>NMIMS MPSTME</h4>
+            <p>Mentoring IEC members using prior leadership experience to help ensure seamless execution of responsibilities.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024 - Present</div>
+            <h3>Vice President - Marketing</h3>
+            <h4>Innovation & Entrepreneurship Cell</h4>
+            <p>Co-Led a 121-member team and executed strategic marketing initiatives to enhance brand visibility and engagement.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024</div>
+            <h3>Master of Ceremonies</h3>
+            <h4>INCEPTIO 7.0</h4>
+            <p>Hosted and moderated sessions, showcasing public speaking and event hosting skills.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 - 2024</div>
+            <h3>Head, Public Relations</h3>
+            <h4>Innovation & Entrepreneurship Cell</h4>
+            <p>Managed public relations for IEC events, enhancing visibility and partnerships.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community Service Timeline -->
+    <div class="timeline-tab" id="community" style="display: none;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023</div>
+            <h3>Community Service Volunteer</h3>
+            <h4>Godrej Memorial Hospital</h4>
+            <p>Assisted hospital operations and ensured smooth communication between departments during patient care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+function openTab(tabId, element) {
+  const tabs = document.querySelectorAll('.timeline-tab');
+  const cards = document.querySelectorAll('.exp-card-tab');
+
+  tabs.forEach(tab => tab.style.display = 'none');
+  cards.forEach(card => card.classList.remove('active'));
+
+  document.getElementById(tabId).style.display = 'block';
+  element.classList.add('active');
+}
+
+</script>
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
