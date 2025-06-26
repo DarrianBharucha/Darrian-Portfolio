@@ -1,0 +1,17 @@
+{
+  "name": "darrian-portfolio",
+  "version": "1.0.0",
+  "description": "Darrian Bharucha's Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'Build complete - static site ready'"
+  },
+  "keywords": ["portfolio", "website", "personal"],
+  "author": "Darrian Bharucha",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
