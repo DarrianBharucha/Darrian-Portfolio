@@ -1078,7 +1078,7 @@ body.is-preload * {
   .nav-menu {
     position: fixed;
     top: 70px;
-    right: -75%; /* ✅ start off-screen */
+    right: -75vw; /* ✅ start off-screen */
     height: calc(100vh - 70px); /* ✅ full height minus navbar */
     left: 0; /* ✅ make it span full width */
     width: 75vw;
