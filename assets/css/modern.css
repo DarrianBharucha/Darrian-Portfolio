@@ -111,7 +111,6 @@ body.is-preload * {
     display: flex;
     list-style: none;
     gap: 2rem;
-    color: black;
 }
 
 .nav-link {
@@ -152,8 +151,15 @@ body.is-preload * {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--text-primary);
+    background: white;
     transition: all 0.3s ease;
+}
+
+/* When mobile menu is open */
+.navbar.menu-open {
+  background: black;
+  backdrop-filter: none; /* Optional: to avoid translucent effect */
+  box-shadow: var(--shadow-md); /* Optional for depth */
 }
 
 /* Hero Section */

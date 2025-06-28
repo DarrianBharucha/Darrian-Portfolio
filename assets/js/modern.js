@@ -191,22 +191,28 @@ function initTypingAnimation() {
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    
-    if (!hamburger || !navMenu) return;
-    
+    const navbar = document.querySelector('.navbar'); // <- Add this
+
+    if (!hamburger || !navMenu || !navbar) return;
+
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
+        const isActive = hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        // Toggle navbar background for mobile
+        navbar.classList.toggle('menu-open', isActive);
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+            navbar.classList.remove('menu-open'); // <- Remove menu-open class
         }
     });
 }
+
 
 // Parallax Effects
 function initParallaxEffects() {
