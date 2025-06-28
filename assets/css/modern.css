@@ -794,6 +794,124 @@ body.is-preload * {
     line-height: 1.6;
 }
 
+/* Certifications Section */
+.certifications-section {
+    padding: 6rem 0;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.certifications-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.certifications-card:nth-child(2) { animation-delay: 0.2s; }
+.certifications-card:nth-child(3) { animation-delay: 0.4s; }
+
+.certifications-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.certifications-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.certifications-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certifications-card:hover .certifications-image img {
+    transform: scale(1.1);
+}
+
+.certifications-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certifications-card:hover .certifications-overlay {
+    opacity: 1;
+}
+
+.certifications-link {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.certifications-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.certifications-content {
+    padding: 1.5rem;
+}
+
+.certifications-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.certifications-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.certifications-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+
 /* Contact Section */
 .contact-section {
     padding: 6rem 0;

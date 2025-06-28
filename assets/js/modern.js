@@ -322,3 +322,16 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+
+function openTab(tabId, element) {
+  const tabs = document.querySelectorAll('.timeline-tab');
+  const cards = document.querySelectorAll('.exp-card-tab');
+
+  tabs.forEach(tab => tab.style.display = 'none');
+  cards.forEach(card => card.classList.remove('active'));
+
+  document.getElementById(tabId).style.display = 'block';
+  element.classList.add('active');
+}
+
