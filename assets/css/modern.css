@@ -1078,20 +1078,19 @@ body.is-preload * {
   .nav-menu {
     position: fixed;
     top: 70px;
-    right: 0;
+    right: -60%; /* ✅ position completely off-screen to the right */
     width: 60%; /* ✅ covers 60% of screen width */
     height: calc(100vh - 70px); /* ✅ full height minus top offset */
     background: black;
     flex-direction: column;
     padding: 2rem 1.5rem;
     gap: 1.5rem;
-    transition: transform 0.3s ease;
-    transform: translateX(100%); /* ✅ hidden initially (slides from right) */
+    transition: right 0.3s ease; /* ✅ animate the right property instead */
     z-index: 999;
   }
 
   .nav-menu.active {
-    transform: translateX(0); /* ✅ slide into view when active */
+    right: 0; /* ✅ slide into view when active */
   }
 
   .nav-link {
