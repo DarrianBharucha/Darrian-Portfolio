@@ -143,26 +143,29 @@ body.is-preload * {
     width: 100%;
 }
 
-.hamburger {
-    display: none;
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    right: -250px;
+    width: 220px;
+    background: black;
     flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    transition: all 0.3s ease;
-}
-
-/* When mobile menu is open */
-/* .navbar.menu-open {
-  background: black;
-  backdrop-filter: none;
-  box-shadow: var(--shadow-md);
-} */
 
 /* Hero Section */
 .hero {
