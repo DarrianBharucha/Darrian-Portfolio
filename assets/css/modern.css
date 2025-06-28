@@ -67,7 +67,9 @@ body.is-preload * {
     opacity: 0.5;
 }
 
-/* Navbar container */
+/* =============================
+   Navbar
+============================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -80,12 +82,10 @@ body.is-preload * {
   transition: all 0.3s ease;
 }
 
-/* Navbar shadow on scroll */
 .navbar.scrolled {
   box-shadow: var(--shadow-md);
 }
 
-/* Inner container */
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -97,7 +97,6 @@ body.is-preload * {
   background: black;
 }
 
-/* Logo */
 .nav-logo {
   font-weight: 700;
   font-size: 1.5rem;
@@ -110,7 +109,9 @@ body.is-preload * {
   background-clip: text;
 }
 
-/* Menu links */
+/* =============================
+   Menu (Desktop)
+============================= */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -146,7 +147,9 @@ body.is-preload * {
   width: 100%;
 }
 
-/* Hamburger icon */
+/* =============================
+   Hamburger Icon
+============================= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -162,29 +165,28 @@ body.is-preload * {
 }
 
 /* =============================
-   Responsive (Mobile View)
+   Mobile Responsive
 ============================= */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-menu {
     position: fixed;
-    top: 70px; /* height of navbar */
-    right: -250px; /* offscreen initially */
+    top: 70px;
+    right: -250px;
     width: 220px;
-    height: auto;
+    background-color: black !important;
     flex-direction: column;
-    background: black;
     padding: 1.5rem;
     gap: 1.5rem;
     transition: right 0.3s ease;
-    z-index: 999;
+    z-index: 9999;
   }
 
   .nav-menu.active {
-    right: 0; /* slide in */
+    right: 0;
   }
 
   .nav-link {
