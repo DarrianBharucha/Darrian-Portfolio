@@ -164,37 +164,6 @@ body.is-preload * {
   transition: all 0.3s ease;
 }
 
-/* =============================
-   Mobile Responsive
-============================= */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex !important;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    right: -250px;
-    width: 220px;
-    background-color: black !important;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-    z-index: 9999;
-  }
-
-  .nav-menu.active {
-    right: 0;
-  }
-
-  .nav-link {
-    color: white !important;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
-}
 
 /* Hero Section */
 .hero {
@@ -1102,4 +1071,36 @@ body.is-preload * {
 .is-preload .contact-item,
 .is-preload .contact-actions {
     animation-play-state: paused;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    background: black;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    display: none; /* hide by default */
+    z-index: 9999;
+  }
+
+  .nav-menu.active {
+    display: flex !important; /* show on toggle */
+  }
+
+  .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
 }

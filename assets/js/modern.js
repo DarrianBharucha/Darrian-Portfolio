@@ -187,27 +187,26 @@ function initTypingAnimation() {
     setTimeout(typeWriter, 1000);
 }
 
+// Mobile Menu
 function initMobileMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-
-  if (!hamburger || !navMenu) return;
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-    }
-  });
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (!hamburger || !navMenu) return;
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
 }
-
-document.addEventListener('DOMContentLoaded', initMobileMenu);
-
 
 // Parallax Effects
 function initParallaxEffects() {
