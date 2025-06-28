@@ -1077,31 +1077,30 @@ body.is-preload * {
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 70px;
-    right: -75vw; /* ✅ start off-screen */
-    height: calc(100vh - 70px); /* ✅ full height minus navbar */
-    left: 0; /* ✅ make it span full width */
+    top: 0;
+    right: 0;
     width: 75vw;
-    background: black;
+    height: 100vh;
+    background-color: black;
     flex-direction: column;
-    align-items: flex-start; /* ✅ Align from left */
-    padding: 6rem 2rem 2rem; /* ✅ Align from top */
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
     gap: 1.5rem;
-    transition: transform 0.3s ease;
     transform: translateX(100%);
+    transition: transform 0.3s ease;
     z-index: 999;
   }
 
   .nav-menu.active {
-    transform: translateX(0); /* ✅ slide into view */
-  }
-
-  .nav-link {
-    color: white !important;
-    font-size: 1.3rem;
+    transform: translateX(0);
   }
 
   .hamburger {
     display: flex;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
   }
 }
