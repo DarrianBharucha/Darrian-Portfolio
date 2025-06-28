@@ -167,11 +167,11 @@ body.is-preload * {
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 70px; /* below navbar */
-    right: -250px; /* hidden by default */
+    top: 70px;
+    right: -250px;
     width: 220px;
+    background-color: black; /* ✅ ensure this is black */
     flex-direction: column;
-    background: black; /* 🔥 this is the mobile menu background */
     padding: 1.5rem;
     gap: 1.5rem;
     transition: right 0.3s ease;
@@ -179,7 +179,13 @@ body.is-preload * {
   }
 
   .nav-menu.active {
-    right: 0; /* slide in when active */
+    right: 0;
+  }
+
+  .nav-link {
+    color: white !important; /* ✅ force white text */
+    font-size: 1.2rem;
+    text-decoration: none;
   }
 
   .hamburger {
