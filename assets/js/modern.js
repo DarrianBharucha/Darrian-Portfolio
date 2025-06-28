@@ -210,16 +210,6 @@ function initMobileMenu() {
 
 initMobileMenu();
 
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-}
-
 // Parallax Effects
 function initParallaxEffects() {
     const shapes = document.querySelectorAll('.shape');

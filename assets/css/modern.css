@@ -143,53 +143,26 @@ body.is-preload * {
     width: 100%;
 }
 
-/* Base styles from your code remain unchanged */
-
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  transition: 0.3s;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
 }
 
-/* Show hamburger on small screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 70px; /* height of your navbar */
-    right: -250px; /* initially hidden */
-    width: 220px;
-    height: auto;
-    background: black;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-    z-index: 999;
-    border-left: 1px solid var(--border-color);
-  }
-
-  .nav-menu.active {
-    right: 0; /* slide in */
-  }
-
-  .nav-link {
-    color: white;
-    font-size: 1.1rem;
-  }
-}
-
+/* When mobile menu is open */
+/* .navbar.menu-open {
+  background: black;
+  backdrop-filter: none;
+  box-shadow: var(--shadow-md);
+} */
 
 /* Hero Section */
 .hero {
