@@ -1077,7 +1077,7 @@ body.is-preload * {
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 35px;
+    top: 70px;
     right: 0;
     left: 0; /* ✅ make it span full width */
     width: 100%;
