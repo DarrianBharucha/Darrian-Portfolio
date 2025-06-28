@@ -93,6 +93,7 @@ body.is-preload * {
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    background: black;
 }
 
 .nav-logo {
@@ -111,7 +112,7 @@ body.is-preload * {
     display: flex;
     list-style: none;
     gap: 2rem;
-    background-color: black;
+    background: black;
 }
 
 .nav-link {
