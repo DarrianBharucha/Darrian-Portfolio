@@ -1082,20 +1082,19 @@ body.is-preload * {
   .nav-menu {
     position: fixed;
     top: 70px;
-    right: 0;
-    width: 100%;
-    max-width: 220px;
+    right: -250px; /* Hidden off-screen initially */
+    width: 220px;
     height: auto;
     background: black;
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
-    display: none; /* hide by default */
+    transition: right 0.3s ease; /* 🔥 Slide animation */
     z-index: 9999;
   }
 
   .nav-menu.active {
-    display: flex !important; /* show on toggle */
+    right: 0; /* Slide in from the right */
   }
 
   .nav-link {
