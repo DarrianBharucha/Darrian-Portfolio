@@ -1080,7 +1080,7 @@ body.is-preload * {
     top: 70px;
     right: 0;
     left: 0; /* ✅ make it span full width */
-    width: 75%;
+    width: 100%;
     background: black;
     flex-direction: column;
     padding: 2rem 1.5rem;
