@@ -191,28 +191,22 @@ function initTypingAnimation() {
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const navbar = document.querySelector('.navbar'); // <- Add this
-
-    if (!hamburger || !navMenu || !navbar) return;
-
+    
+    if (!hamburger || !navMenu) return;
+    
     hamburger.addEventListener('click', () => {
-        const isActive = hamburger.classList.toggle('active');
+        hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
-        
-        // Toggle navbar background for mobile
-        navbar.classList.toggle('menu-open', isActive);
     });
-
+    
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
-            navbar.classList.remove('menu-open'); // <- Remove menu-open class
         }
     });
 }
-
 
 // Parallax Effects
 function initParallaxEffects() {
