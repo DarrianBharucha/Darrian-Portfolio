@@ -197,6 +197,9 @@ function initMobileMenu() {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+
+        document.body.classList.toggle('no-scroll', isActive);
+
     });
     
     // Close menu when clicking outside
