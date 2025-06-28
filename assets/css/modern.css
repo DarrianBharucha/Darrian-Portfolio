@@ -1103,34 +1103,3 @@ body.is-preload * {
     display: flex;
   }
 }
-
-@media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -75%;
-    width: 75vw; /* ✅ Covers 75% of screen */
-    height: 100vh;
-    background-color: black;
-    flex-direction: column;
-    align-items: flex-start; /* ✅ Align from left */
-    padding: 6rem 2rem 2rem; /* ✅ Align from top */
-    gap: 1.5rem;
-    transition: right 0.3s ease;
-    z-index: 999;
-  }
-
-  .nav-menu.active {
-    right: 0; /* ✅ Slide into view */
-  }
-
-  .nav-link {
-    color: white !important;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
