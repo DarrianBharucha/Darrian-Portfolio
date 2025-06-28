@@ -324,14 +324,23 @@ if ('serviceWorker' in navigator) {
 }
 
 
+// Tab functionality for experience section
 function openTab(tabId, element) {
-  const tabs = document.querySelectorAll('.timeline-tab');
-  const cards = document.querySelectorAll('.exp-card-tab');
+    const tabs = document.querySelectorAll('.timeline-tab');
+    const cards = document.querySelectorAll('.exp-card-tab');
+    const targetTab = document.getElementById(tabId);
 
-  tabs.forEach(tab => tab.style.display = 'none');
-  cards.forEach(card => card.classList.remove('active'));
+    // If the clicked tab is already active, hide it and remove active state
+    if (element.classList.contains('active')) {
+        targetTab.style.display = 'none';
+        element.classList.remove('active');
+        return;
+    }
 
-  document.getElementById(tabId).style.display = 'block';
-  element.classList.add('active');
+    // Otherwise, show the clicked tab and set active state
+    tabs.forEach(tab => tab.style.display = 'none');
+    cards.forEach(card => card.classList.remove('active'));
+
+    targetTab.style.display = 'block';
+    element.classList.add('active');
 }
-
