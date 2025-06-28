@@ -1075,31 +1075,31 @@ body.is-preload * {
 
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
   .nav-menu {
     position: fixed;
     top: 70px;
-    right: -250px; /* Hidden off-screen initially */
-    width: 220px;
-    height: auto;
+    right: 0;
+    left: 0; /* ✅ make it span full width */
+    width: 100%;
     background: black;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     gap: 1.5rem;
-    transition: right 0.3s ease; /* 🔥 Slide animation */
-    z-index: 9999;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 999;
   }
 
   .nav-menu.active {
-    right: 0; /* Slide in from the right */
+    transform: translateX(0); /* ✅ slide into view */
   }
 
   .nav-link {
     color: white !important;
-    font-size: 1.2rem;
-    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .hamburger {
+    display: flex;
   }
 }
