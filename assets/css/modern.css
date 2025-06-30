@@ -902,6 +902,32 @@ body.is-preload * {
     gap: 0.5rem;
 }
 
+.verify-link {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.verify-link i {
+    margin-right: 6px;
+    color: var(--primary-color);
+}
+
+.verify-link a {
+    color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.verify-link a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+
 .tech-tag {
     padding: 0.25rem 0.75rem;
     background: var(--bg-secondary);
