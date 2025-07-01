@@ -344,3 +344,11 @@ function openTab(tabId, element) {
     targetTab.style.display = 'block';
     element.classList.add('active');
 }
+
+// Automatically open Internship tab on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const internshipButton = document.querySelector('.exp-card-tab[onclick*="internship"]');
+    if (internshipButton) {
+        openTab('internship', internshipButton);
+    }
+});
